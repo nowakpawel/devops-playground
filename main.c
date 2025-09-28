@@ -3,7 +3,7 @@
 #include <float.h>
 
 int main() {
-	printf("Integer Types:\n");
+	printf("Integer types:\n");
 	printf("char: %d to %d\n", CHAR_MIN, CHAR_MAX); 
 	printf("short: %d to %d\n", SHRT_MIN, SHRT_MAX); 
 	printf("int: %d to %d\n", INT_MIN, INT_MAX); 
