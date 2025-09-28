@@ -13,7 +13,7 @@ int main() {
 	printf("\nFloating-point types:\n");
 	printf("float: %e to %e\n", FLT_MIN, FLT_MAX); 
 	printf("double: %e to %e\n", DBL_MIN, DBL_MAX); 
-	printf("long double: %Le to %Le\n", LDBL_MIN, LDBL_MAX); 
+	printf("long double: %Le to %Le\n", LDBL_MIN, LDBL_MAX) 
 
-//	return 0;
+	return 0;
 }
