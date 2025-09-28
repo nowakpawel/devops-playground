@@ -2,6 +2,10 @@
 #include <limits.h>
 #include <float.h>
 
+void printDelimiter(char *text) {
+	printf("\n====== %s ======\n", text);
+}	
+
 int main() {
 	printf("Integer types:\n");
 	printf("char: %d to %d\n", CHAR_MIN, CHAR_MAX); 
@@ -13,7 +17,10 @@ int main() {
 	printf("\nFloating-point types:\n");
 	printf("float: %e to %e\n", FLT_MIN, FLT_MAX); 
 	printf("double: %e to %e\n", DBL_MIN, DBL_MAX); 
-	printf("long double: %Le to %Le\n", LDBL_MIN, LDBL_MAX) 
+	printf("long double: %Le to %Le\n", LDBL_MIN, LDBL_MAX);
+
+	printDelimiter("Compilation Done");
+
 
 	return 0;
 }
