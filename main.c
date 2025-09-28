@@ -15,5 +15,5 @@ int main() {
 	printf("double: %e to %e\n", DBL_MIN, DBL_MAX); 
 	printf("long double: %Le to %Le\n", LDBL_MIN, LDBL_MAX); 
 
-	return 0;
+//	return 0;
 }
