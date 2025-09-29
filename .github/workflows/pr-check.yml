@@ -1,21 +1,16 @@
-name: Main Build & Artifact
+name: Pull Request Checks
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  build-and-upload:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y build-essential
       - run: gcc -o app main.c
-      - run: ./test.sh
-      - name: Upload compiled artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: c-app
-          path: app
+      - run: ./test.sh 
