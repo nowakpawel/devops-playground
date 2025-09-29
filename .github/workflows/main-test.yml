@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-test:
@@ -11,19 +14,19 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: action/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install build dependencies
-        run: sudo apt-get update && sudo apt-get install -y build-essenial
+        run: sudo apt-get update && sudo apt-get install -y build-essential
 
       - name: Build (gcc)
-        name: gcc -Wall -Wextra -std=c11 -O2 -o app main.c
+        run: gcc -Wall -Wextra -std=c11 -O2 -o app main.c
 
       - name: Run tests
         run: ./test.sh
 
       - name: Upload compiled artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: c-app
           path: app

@@ -1,12 +1,24 @@
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>
+#include <string.h>
 
 void printDelimiter(char *text) {
 	printf("\n====== %s ======\n", text);
 }	
 
+void printHello(char *name) {
+	printf("Hello %s.\n Here you have all C basic types ranges\n", name);
+}
+
 int main() {
+	char name[15];
+
+	printf("Enter you name:\t");
+	fgets(name, sizeof(name), stdin);
+	name[strlen(name) - 1] = '\0'; //Remove 'new line' character when hiting the Enter
+	printHello(name);
+
 	printf("Integer types:\n");
 	printf("char: %d to %d\n", CHAR_MIN, CHAR_MAX); 
 	printf("short: %d to %d\n", SHRT_MIN, SHRT_MAX); 
