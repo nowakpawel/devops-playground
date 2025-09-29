@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y build-essenial
 
       - name: Build (gcc)
-        name: gcc -Wall -Wextra -std=c11 -O2 -o app main.c
+        run: gcc -Wall -Wextra -std=c11 -O2 -o app main.c
 
       - name: Run tests
         run: ./test.sh
