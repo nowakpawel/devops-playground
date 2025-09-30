@@ -57,3 +57,7 @@
 - [ ] GitOps with ArgoCD or Flux.
 - [ ] Immutable infrastructure patterns.
 - [ ] Scaling & cost optimization.
+
+
+## INFO
+Folder **legacy-experiments** contains my initial CI/CD experiments with a simple C program I used to cover topic from Phase 1-2 (Git branching, GitHub Actions, Jenkins pipelines). 
