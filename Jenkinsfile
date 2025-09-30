@@ -37,9 +37,7 @@ pipeline {
 
 		stage('Archive if main') {
 			when { expression {env.BRANCH_NAME == 'main'} }
-			steps {
-				archiveArtifacts: 'app', fingerprint: true
-			}
+			steps { archiveArtifacts artifacts: 'app', fingerprint: true }
 		}
 	}
 
