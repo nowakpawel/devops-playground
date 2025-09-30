@@ -11,11 +11,14 @@
 
 ### Phase 2: CI/CD Mastery (Automating builds, tests, deployments)
 - [ ] Expand GitHub Actions workflows:
-    - Multi-job (Ubuntu, Mac, Windows)
-    - Build artifacts (e.g. compiled app)
-    - Run unit tests (C, Python, etc.)
-- [ ] Learn Jenkins basics.
-- [ ] Learn common CI/CD patterns: pipelines, approvals, environments.
+    - [ ] Multi-job (Ubuntu, Mac, Windows)
+    - [x] Build artifacts (e.g. compiled app)
+    - [x] Run unit tests (C, Python, etc.)
+- [x] Learn Jenkins basics.
+- [ ] Learn common CI/CD patterns: 
+    - [x] pipelines 
+    - [ ] approvals
+    - [ ] environments.
 - [ ] Practice deployment workflow: build Docker image → push to Docker Hub → deploy to server/container.
 
 ## Phase 3: Containers & Orchestration (Docker + Kubernetes basics)
