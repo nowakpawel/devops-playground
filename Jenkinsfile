@@ -39,14 +39,17 @@ pipeline {
 			when { branch "main" }
 			steps { 
 				archiveArtifacts artifacts: 'app', fingerprint: true 
+				echo "Artifact archived for main branch"
 			}
 		}
 	}
 
 	post {
-		always {
-			echo "Pipeline finished for branch ${env.BRANCH_NAME}"
+		success {
+			echo "✅ Build succeeded on branch: ${env.BRANCH_NAME}"
 		}
+		failure {
+			echo "❌ Build failed on branch: ${env.BRANCH_NAME}"
 	}
 }
 
