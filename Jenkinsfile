@@ -25,13 +25,13 @@ pipeline {
 
 		stage('Build') {
 			steps {
-				sh 'gcc -Wall -Wextra -std=c11 -O2 -o app main.c'
+				sh 'gcc -Wall -Wextra -std=c11 -O2 -o app ./legacy-experiments/main.c'
 			}
 		}
 
 		stage('Test') {
 			steps {
-				sh './test.sh'
+				sh './legacy-experiments/test.sh'
 			}
 		}
 
