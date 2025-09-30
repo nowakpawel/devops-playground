@@ -50,6 +50,7 @@ pipeline {
 		}
 		failure {
 			echo "❌ Build failed on branch: ${env.BRANCH_NAME}"
+		}
 	}
 }
 
