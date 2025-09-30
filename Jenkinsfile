@@ -1,6 +1,6 @@
 // Jenkinsfile - checks for gcc
 pipeline {
-	agent {docker { image 'gcc:12' }}
+	agent any 
 	
 	stages {
 		stage('Checkout') {
