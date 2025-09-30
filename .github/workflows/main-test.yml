@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y build-essential
-      - run: gcc -o app main.c
-      - run: ./test.sh
+      - run: gcc -o app ./legacy-experiments/main.c
+      - run: ./legacy-experiments/test.sh
       - name: Upload compiled artifact
         uses: actions/upload-artifact@v4
         with:
