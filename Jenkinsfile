@@ -36,7 +36,7 @@ pipeline {
 		}
 
 		stage('Archive if main') {
-			when { branch "main" } }
+			when { branch "main" }
 			steps { 
 				archiveArtifacts artifacts: 'app', fingerprint: true 
 			}
