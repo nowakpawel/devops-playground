@@ -2,7 +2,7 @@
 set -e
 
 #Compile the program
-gcc -o app main.c
+gcc -o app ./legacy-experiments/main.c
 
 #Run it and check if output contains "Integer types"
 
