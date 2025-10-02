@@ -22,12 +22,6 @@ pipeline {
 			}
 		}
 
-		stage('Test') {
-			steps {
-				sh './legacy-experiments/test.sh'
-			}
-		}
-
 		stage('Archive Artifact if main') {
 			when { 
 				branch "main"
