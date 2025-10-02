@@ -1,4 +1,4 @@
-name: Main Build & Artifact
+name: Main Build
 
 on:
   push:
@@ -6,16 +6,25 @@ on:
       - main
 
 jobs:
-  build-and-upload:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - run: sudo apt-get update && sudo apt-get install -y build-essential
-      - run: gcc -o app ./legacy-experiments/main.c
-      - run: ./legacy-experiments/test.sh
-      - name: Upload compiled artifact
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Build with Maven
+        working-directory: backend
+        run: mvn -B clean package
+
+      - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
-          name: c-app
-          path: app
+          name: task-manager-jar
+          path: backend/target/*.jar

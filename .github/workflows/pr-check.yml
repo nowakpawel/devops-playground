@@ -6,11 +6,19 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - run: sudo apt-get update && sudo apt-get install -y build-essential
-      - run: gcc -o app ./legacy-experiments/main.c
-      - run: ./legacy-experiments/test.sh 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Build with Maven
+        working-directory: backend
+        run: mvn -B clean verify
