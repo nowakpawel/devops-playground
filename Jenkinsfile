@@ -36,7 +36,7 @@ pipeline {
 			steps {
 				dir('backend') {
 					archiveArtifacts artifacts: 'target/*.jar', fingerprint: true 
-					echo "Artifact built successfully
+					echo "Artifact built successfully"
 				}
 			}
 		}
