@@ -1,4 +1,4 @@
-package com.nowakpawel.task_manager;
+package com.nowakpawel.taskmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
