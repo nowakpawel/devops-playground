@@ -1,4 +1,4 @@
-package com.nowakpawel.task_manager;
+package com.nowakpawel.taskmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
