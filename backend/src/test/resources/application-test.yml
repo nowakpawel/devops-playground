@@ -9,3 +9,7 @@ spring:
 
   flyway:
     enabled: false
+
+logging:
+  level:
+    com.nowakpawel: DEBUG
