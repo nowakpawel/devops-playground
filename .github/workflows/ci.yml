@@ -35,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: task-manager-jar
-          path: backend/target*.jar 
+          path: backend/target/*.jar 
