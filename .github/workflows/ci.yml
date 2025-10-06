@@ -26,7 +26,7 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: Build & Test
+      - name: Build and Test
 	working-directory: backend
 	run: mvn clean verify -Dspring.profiles.active=test
       

@@ -27,7 +27,7 @@ jobs:
       - name: Build Docker image
         working-directory: backend
         run: |
-          docker-build -t task-manager:dev-${{ github.sha }} .
+          docker build -t task-manager:dev-${{ github.sha }} .
           docker tag task-manager:dev-${{ github.sha }} task-manager:dev-latest
 
       - name: Log deployment
