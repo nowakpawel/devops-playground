@@ -30,7 +30,7 @@ jobs:
 	working-directory: backend
 	run: mvn clean verify
         env: 
-          SPRING_PROFILES_ACTIVE: spring.profiles.active=test
+          SPRING_PROFILES_ACTIVE: test
       
       - name: Upload JAR
         if: success()
