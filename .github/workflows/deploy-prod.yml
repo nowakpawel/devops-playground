@@ -28,7 +28,7 @@ jobs:
         working-directory: backend
         run: |
           docker build -t task-manager:prod-${{ github.sha }} .
-          docker tag task-manager:prod-${{ github.sha }} task-manager:prod:latest
+          docker tag task-manager:prod-${{ github.sha }} task-manager:prod-latest
 
       - name: Log deployment
         run: echo "Deployed to PROD - task-manager:prod-${{ github.sha }}"
