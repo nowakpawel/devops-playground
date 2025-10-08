@@ -18,7 +18,7 @@ pipeline {
 			steps {
 				dir('backend') {
 					script {
-						if (envv.BRANCH_NAME == 'main') {
+						if (env.BRANCH_NAME == 'main') {
 							sh 'mvn -B clean package -DskipTests'
 						} else {
 							sh 'mvn -B clean verify -Dspring.profiles.active=test'
