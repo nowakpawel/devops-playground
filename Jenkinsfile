@@ -4,6 +4,7 @@ pipeline {
 		docker {
 			image 'maven:3.9.4-eclipse-temurin-17'
 			args '-v /root/.m2:/root/.m2'
+		}
 	}
 	
 	stages {
@@ -16,7 +17,7 @@ pipeline {
 		stage('Build & Test') {
 			steps {
 				dir('backend') {
-					sh 'mvn -B clean verify'
+					sh 'mvn -B clean verify -Dspring.profiles.active=test'
 				}
 			}
 		}
