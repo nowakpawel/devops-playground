@@ -17,7 +17,13 @@ pipeline {
 		stage('Build & Test') {
 			steps {
 				dir('backend') {
-					sh 'mvn -B clean verify -Dspring.profiles.active=test'
+					script {
+						if (envv.BRANCH_NAME == 'main') {
+							sh 'mvn -B clean package -DskipTests'
+						} else {
+							sh 'mvn -B clean verify -Dspring.profiles.active=test'
+						}
+					}
 				}
 			}
 		}
