@@ -37,7 +37,7 @@ jobs:
           push: true
           tags: |
             nowakpawel/task-manager:dev-${{ github.sha }}
-          nowakpawel/task-manager:dev:latest
+            nowakpawel/task-manager:dev:latest
 
           #working-directory: backend
           #run: |
