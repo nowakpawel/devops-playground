@@ -27,8 +27,13 @@ jobs:
       - name: Build Docker image
         working-directory: backend
         run: |
-          docker build -t task-manager:dev-${{ github.sha }} .
-          docker tag task-manager:dev-${{ github.sha }} task-manager:dev-latest
+          docker build -t nowakpawel/task-manager:dev-${{ github.sha }} .
+          docker tag nowakpawel/task-manager:dev-${{ github.sha }} nowakpawel/task-manager:dev-latest
+          docker push nowakpawel/task-manager:dev-${{ github.sha }}
+          docker push nowakpawel/task-manager:dev-latest
 
       - name: Log deployment
-        run: echo "Deployment to DEV - task:manager:dev-${{ github.sha }}"
+        run: | 
+          echo "✅Deployment to DEV"
+          echo "Image: nowakpawel/task:manager:dev-latest"
+          echo "Commit: $${{github.sha }}"
