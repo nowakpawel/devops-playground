@@ -35,7 +35,7 @@ jobs:
         run: |
           docker build -t nowakpawel/task-manager:prod-${{ github.sha }} .
           docker tag nowakpawel/task-manager:prod-${{ github.sha }} nowakpawel/task-manager:prod-latest
-          docker push nowakpawel/task-manager:prod-${{ commit.sha }}
+          docker push nowakpawel/task-manager:prod-${{ github.sha }}
           docker push nowakpawel/task-manager:prod-latest
 
       - name: Log deployment
